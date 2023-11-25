@@ -6,7 +6,7 @@ const MaxWithWrapper = ({
   className,
   children,
 }: {
-  className: string;
+  className?: string;
   children: ReactNode;
 }) => {
   return (
