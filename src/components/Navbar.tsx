@@ -1,7 +1,7 @@
 import React from "react";
 import MaxWithWrapper from "./MaxWithWrapper";
 import Link from "next/link";
-import { Icons } from "./icons";
+import { Icons } from "./Icons";
 import NavItems from "./NavItems";
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
                 </Link>
               </div>
 
-              <div className=" z-50 lg:ml-8 lg:block   ">
+              <div className=" z-50 lg:ml-8 lg:block hidden  ">
                 <NavItems />
               </div>
             </div>
