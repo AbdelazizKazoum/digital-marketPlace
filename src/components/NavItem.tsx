@@ -49,7 +49,7 @@ const NavItem = ({ category, handleOpen, isOpen, isAnyOpen }: NavItemProps) => {
                 <div className="col-span-4 col-start-1 grid grid-cols-3 gap-x-8">
                   {category.featured.map((item, index) => (
                     <div key={index} className=" group text-base sm:text-sm ">
-                      <div className=" relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75 ">
+                      <div className=" relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75 cursor-pointer ">
                         <Image
                           src={item.imageSource}
                           alt=""
