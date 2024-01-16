@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Icons } from "./Icons";
 import NavItems from "./NavItems";
 import { buttonVariants } from "./ui/button";
+import Cart from "./Cart";
 
 const Navbar = () => {
   const user = null;
@@ -25,7 +26,7 @@ const Navbar = () => {
               </div>
 
               <div className="ml-auto flex items-center ">
-                <div className="hidden lg:flex  ">
+                <div className="hidden lg:flex  items-center ">
                   {user ? null : (
                     <Link
                       className={buttonVariants({
@@ -36,6 +37,40 @@ const Navbar = () => {
                       Sign in{" "}
                     </Link>
                   )}
+                  {user ? null : (
+                    <span
+                      className="h-6 w-px bg-gray-200"
+                      aria-hidden="true"
+                    ></span>
+                  )}
+
+                  {user ? (
+                    <p></p>
+                  ) : (
+                    <Link
+                      href="/sign-up"
+                      className={buttonVariants({ variant: "ghost" })}
+                    >
+                      Create account
+                    </Link>
+                  )}
+
+                  {user ? (
+                    <span
+                      className="h-6 w-px bg-gray-200"
+                      aria-hidden="true"
+                    ></span>
+                  ) : null}
+
+                  {user ? null : (
+                    <span
+                      className="h-6 w-px bg-gray-200"
+                      aria-hidden="true"
+                    ></span>
+                  )}
+                  <div className="ml-4 flow-root  lg-ml-6">
+                    <Cart />
+                  </div>
                 </div>
               </div>
             </div>
