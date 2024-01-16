@@ -39,6 +39,11 @@ export const getPayloadCLient = async ({ initOptions }: Args = {}) => {
   }
 
   try {
-    cashed.client;
-  } catch (e: unknown) {}
+    cashed.client = await cashed.promsise;
+  } catch (e: unknown) {
+    cashed.promsise = null;
+    throw e;
+  }
+
+  return cashed.client;
 };
