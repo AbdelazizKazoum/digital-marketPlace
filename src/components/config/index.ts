@@ -42,3 +42,26 @@ export const PRODUCT_CATEGORIES = [
     ],
   },
 ];
+
+export const NAV_ELEMENTS = [
+  {
+    label: "Explore",
+    href: "/explore",
+    icon: "",
+  },
+  {
+    label: "Projects",
+    href: "/projects",
+    icon: "",
+  },
+  {
+    label: "About us",
+    href: "/about",
+    icon: "",
+  },
+  {
+    label: "Contact us",
+    href: "/contact",
+    icon: "",
+  },
+];

@@ -5,6 +5,7 @@ import { Icons } from "./Icons";
 import NavItems from "./NavItems";
 import { buttonVariants } from "./ui/button";
 import Cart from "./Cart";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const user = null;
@@ -15,6 +16,7 @@ const Navbar = () => {
           <div className=" border-b border-gray-200 h-16 ">
             <div className=" flex items-center h-16 ">
               {/* mobile nav */}
+              <MobileNav />
               <div className=" ml-4 flex lg:ml-0 ">
                 <Link href="/">
                   <Icons.logo className="h-10 w-10" />

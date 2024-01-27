@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { PRODUCT_CATEGORIES } from "./config";
+import { NAV_ELEMENTS, PRODUCT_CATEGORIES } from "./config";
 import NavItem from "./NavItem";
 import { useOnClickOutside } from "@/hooks/use-click-outside";
+import Link from "next/link";
+import { buttonVariants } from "./ui/button";
 
 const NavItems = () => {
   const [activeIndex, setActiveIndex] = useState<null | number>(null);
@@ -29,8 +31,18 @@ const NavItems = () => {
   }, []);
 
   return (
-    <div ref={navRef} className="flex h-full gap-4">
-      {PRODUCT_CATEGORIES.map((category, i) => {
+    <div ref={navRef} className="flex h-full gap-2">
+      {NAV_ELEMENTS.map((item, i) => (
+        <div className="     ">
+          <Link
+            className={buttonVariants({ variant: "ghost" })}
+            href={item.href}
+          >
+            {item.label}{" "}
+          </Link>
+        </div>
+      ))}
+      {/* {PRODUCT_CATEGORIES.map((category, i) => {
         const handleOpen = () => {
           if (activeIndex === i) setActiveIndex(null);
           else setActiveIndex(i);
@@ -46,7 +58,7 @@ const NavItems = () => {
             isAnyOpen={isAnyOpen}
           />
         );
-      })}
+      })} */}
     </div>
   );
 };
