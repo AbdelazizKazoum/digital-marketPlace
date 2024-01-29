@@ -1,4 +1,5 @@
 import MaxWithWrapper from "@/components/MaxWithWrapper";
+import ProductsReel from "@/components/products/ProductsReel";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ArrowDownToLine, CheckCircle, Leaf } from "lucide-react";
 import Image from "next/image";
@@ -45,6 +46,9 @@ export default function Home() {
           </div>
         </div>
       </MaxWithWrapper>
+      <section className="Product-reel">
+        <ProductsReel />
+      </section>
       <section className="border-t border-gray-200 bg-gray-50">
         <MaxWithWrapper className="py-20   ">
           <div className=" grid grid-cols-1 gap-y-12 md:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-3 ">
