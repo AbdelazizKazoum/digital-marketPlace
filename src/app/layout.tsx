@@ -20,8 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn("relative font-sans antialiased ")}>
         <Navbar />
-        <main className=" relative flex flex-col w-full min-h-screen  ">
-          <div className="flex-grow flex-1 ">{children}</div>
+        <main className=" relative flex flex-col w-full   ">
+          <div className="">{children}</div>
         </main>
       </body>
     </html>
